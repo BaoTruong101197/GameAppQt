@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>WelcomeScreen.qml</file>
+        <file>Data/Img/Easymath.png</file>
+        <file>EasyMaths.qml</file>
+        <file>Common/ProgressBar.qml</file>
+        <file>Common/CardModal.qml</file>
+        <file>Common/Overlay.qml</file>
+    </qresource>
+</RCC>
