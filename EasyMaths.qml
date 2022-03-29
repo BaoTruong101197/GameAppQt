@@ -112,7 +112,7 @@ Item {
             maximum: 10
             value: 10
             minimum: 0
-            timeOfProgessBar: 10
+            timeOfProgessBar: 10.2
             animationRunning: false
 
             onValueChanged: {

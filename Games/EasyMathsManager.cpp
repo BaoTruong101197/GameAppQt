@@ -134,6 +134,9 @@ void EasyMathsManager::setTime(const int& _time)
 {
     if (m_nTime != _time) {
         m_nTime = _time;
+        if (m_nTime == 0) {
+            emit gameOver();
+        }
     }
 
     emit timeChanged();

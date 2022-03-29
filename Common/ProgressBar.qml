@@ -9,7 +9,7 @@ Rectangle { // background
     property double minimum: 0
     property bool   animationRunning: false
     property alias  foreground: foreground
-    property int    timeOfProgessBar: 10
+    property double    timeOfProgessBar: 10
     color: "#fff"
 
 // private
