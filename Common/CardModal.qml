@@ -57,57 +57,31 @@ Item {
                 anchors.top: textColumn.bottom
                 anchors.topMargin: 50
                 spacing: 20
-                Rectangle {
+                GeneralButton {
                     id: backBtn
-                    width: backBtnText.width + 20; height: backBtnText.height + 20
+                    width: text.width + 20; height: text.height + 20
                     color: "green"
-                    border.color: mouseArea1.pressed ? "#8c6339" : "green"
-                    radius: 10
+                    text.text: "Trở lại trang chủ"
+                    text.color: "#fff"
+                    text.font.pixelSize: 20
+                    text.font.bold: false
 
-                    Text {
-                        id: backBtnText
-                        font.family: "Helvetica"
-                        anchors.centerIn: parent
-                        text: "Trở lại trang chủ"
-                        font.pixelSize: 20
-                        color: "#fff"
-                    }
-
-                    MouseArea {
-                        id: mouseArea1
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.OpenHandCursor
-
-                        onClicked: {
-                            requestGoToHomeScreen()
-                        }
+                    onButtonClicked: {
+                        requestGoToHomeScreen()
                     }
                 }
 
-                Rectangle {
+                GeneralButton {
                     id: continueBtn
-                    width: continueBtnText.width + 20; height: continueBtnText.height + 20
+                    width: text.width + 20; height: text.height + 20
                     color: "#fff"
+                    text.text: "Chơi lại"
+                    text.color: "#000"
+                    text.font.pixelSize: 20
+                    text.font.bold: false
 
-                    Text {
-                        id: continueBtnText
-                        font.family: "Helvetica"
-                        anchors.centerIn: parent
-                        text: "Tiếp tục"
-                        font.pixelSize: 20
-                        color: "#000"
-                    }
-
-                    MouseArea {
-                        id: mouseArea2
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.OpenHandCursor
-
-                        onClicked: {
-                            requestContinueGame()
-                        }
+                    onButtonClicked: {
+                        requestContinueGame()
                     }
                 }
             }

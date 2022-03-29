@@ -7,5 +7,6 @@
         <file>Common/ProgressBar.qml</file>
         <file>Common/CardModal.qml</file>
         <file>Common/Overlay.qml</file>
+        <file>Common/GeneralButton.qml</file>
     </qresource>
 </RCC>

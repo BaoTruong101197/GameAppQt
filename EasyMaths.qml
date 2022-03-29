@@ -13,7 +13,7 @@ Item {
         id: cardModel
         visible: false
         width: container.width; height: container.height
-        widthModal: 450; heightModal: 400
+        widthModal: 450; heightModal: 330
         score: easyMath.score
         highScore: dataModel.getDataFromRole(Enums.HMI_GAME_EASY_MATH, Enums.ROLE_GAME_HIGHSCORE)
 
@@ -165,57 +165,31 @@ Item {
                 transformOrigin: Item.Left
                 spacing: 20
                 anchors.centerIn: parent
-                Rectangle {
+                GeneralButton {
                     id: correctBtn
                     width: 100; height: 100
                     color: "#fff"
-                    border.color: mouseArea1.pressed ? "#8c6339" : "#000"
+                    text.text: "Đúng"
+                    text.color: "green"
+                    text.font.pixelSize: 25
+                    text.font.bold: true
 
-                    Text {
-                        font.family: "Helvetica"
-                        anchors.centerIn: parent
-                        text: "Đúng"
-                        font.pixelSize: 25
-                        color: "green"
-                        font.bold: true
-                    }
-
-                    MouseArea {
-                        id: mouseArea1
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.OpenHandCursor
-
-                        onClicked: {
-                            easyMath.requestAnswearGame(true)
-                        }
+                    onButtonClicked: {
+                        easyMath.requestAnswearGame(true)
                     }
                 }
 
-                Rectangle {
+                GeneralButton {
                     id: incorrectBtn
                     width: 100; height: 100
                     color: "#fff"
-                    border.color: mouseArea2.pressed ? "#8c6339" : "#000"
+                    text.text: "Sai"
+                    text.color: "red"
+                    text.font.pixelSize: 25
+                    text.font.bold: true
 
-                    Text {
-                        font.family: "Helvetica"
-                        anchors.centerIn: parent
-                        text: "Sai"
-                        font.pixelSize: 25
-                        color: "red"
-                        font.bold: true
-                    }
-
-                    MouseArea {
-                        id: mouseArea2
-                        anchors.fill: parent
-                        hoverEnabled: true
-                        cursorShape: Qt.OpenHandCursor
-
-                        onClicked: {
-                            easyMath.requestAnswearGame(false)
-                        }
+                    onButtonClicked: {
+                        easyMath.requestAnswearGame(false)
                     }
                 }
             }
